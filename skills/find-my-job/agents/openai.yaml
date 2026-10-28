@@ -1,0 +1,7 @@
+interface:
+  display_name: "Find My Job"
+  short_description: "Find fresh, verified jobs that fit you"
+  brand_color: "#2563EB"
+  default_prompt: "Use $find-my-job to find verified jobs that fit me."
+policy:
+  allow_implicit_invocation: true
