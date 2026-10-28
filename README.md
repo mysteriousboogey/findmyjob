@@ -52,3 +52,7 @@ python scripts/quick_validate.py skills/find-my-job
 ```
 
 The plugin contains no credentials and stores no candidate data by itself.
+
+## License
+
+[MIT](LICENSE) — use, modify, and share it while keeping the license notice.
