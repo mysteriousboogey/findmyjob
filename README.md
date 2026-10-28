@@ -10,9 +10,15 @@ A ChatGPT-first skill for finding fresh, verified jobs that fit a candidate's re
 
 [Open one-link setup in the ChatGPT desktop app](codex://new?prompt=Add%20mysteriousboogey%2Ffindmyjob%20as%20a%20plugin%20marketplace%2C%20install%20find-my-job%2C%20then%20use%20%24find-my-job%20to%20find%20jobs%20for%20me.)
 
-The repository is private, so setup works only for GitHub users who already have access and whose desktop Git credentials can read it. Installation support and workspace policy vary; the link opens a prepared request and does not silently grant repository or scheduling permissions. Install from a supported desktop surface first, then use the installed plugin in ChatGPT on web, desktop, or mobile. No Python installation is required on a phone.
+The repository is private, so setup works only for GitHub users who already have access and whose desktop Git credentials can read it. Installation support and workspace policy vary; the link opens a prepared request and does not silently grant repository or scheduling permissions. The Find My Job plugin is a small set of readable instructions and helper files from this repository—not an application that can silently control your computer. Install from a supported desktop surface first, then use it in ChatGPT on web, desktop, or mobile. No Python installation is required on a phone.
 
-For another AI, copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md). Web search remains the reliable baseline everywhere. On a computer with code execution, the skill may install [Scrapling](https://github.com/D4Vinci/Scrapling) as an optional enhancement and falls back cleanly when it cannot.
+For another AI, copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md). Web search remains the reliable baseline everywhere.
+
+### Optional Scrapling installation
+
+On a computer with code execution, Find My Job may offer to install [Scrapling](https://github.com/D4Vinci/Scrapling), an open-source Python tool that helps read public job pages efficiently. Before anything is installed, the AI must explain what it is and ask permission. The normal Python package installer fetches the public `scrapling` package; users can inspect the linked source and should never bypass a security warning merely because the skill requested it.
+
+Saying **No** is completely fine. Search may be slower and some difficult pages may not be verified, but setup and job searching continue using ordinary web search. Find My Job must not stop halfway, keep asking, or disable core features because Scrapling was declined or failed to install.
 
 ## What v1 does
 

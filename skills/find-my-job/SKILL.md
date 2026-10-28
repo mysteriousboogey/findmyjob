@@ -30,7 +30,15 @@ Confirm the profile in two lists: **must have** and **prefer**. Ask the candidat
 
 ## Search and verify
 
-Read [references/search-and-ranking.md](references/search-and-ranking.md) before searching. Use ordinary AI web search on every platform. If execution is permitted, run `python scripts/scrapling_support.py --install` once to detect or install Scrapling; a failure must return cleanly to web search. Never require Python on a phone.
+Read [references/search-and-ranking.md](references/search-and-ranking.md) before searching. Use ordinary AI web search on every platform.
+
+When code execution is available and Scrapling is not already installed, explain before asking permission:
+
+- Scrapling is an open-source Python website-reading tool from `github.com/D4Vinci/Scrapling`. It can read some public job pages more efficiently; it is not required and does not apply for jobs.
+- The helper will use Python's normal package installer to install the public `scrapling` package. Do not describe any download as guaranteed safe: identify its source and purpose, let the candidate or platform review the request, and never bypass a security warning.
+- Choosing **No** is valid. It may make searches slower or leave fewer hard-to-read pages verified, but ordinary web search still works.
+
+Ask once: “May I install the optional Scrapling package on this computer?” If yes, run `python scripts/scrapling_support.py --install`. If no, unavailable, blocked, or failed, acknowledge it briefly and continue the entire setup and search with web search. Never stop onboarding, repeatedly ask, or require Python on a phone.
 
 Respect robots.txt, site terms, access controls, rate limits, and blocks. Do not bypass logins, CAPTCHAs, or anti-bot controls. Prefer search results and public first-party vacancy pages over scraping.
 

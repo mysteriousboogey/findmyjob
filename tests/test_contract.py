@@ -14,6 +14,8 @@ class ContractTests(unittest.TestCase):
         self.assertIn("| # | Job title / Company | Salary | Work arrangement | Contact | Apply |", text)
         self.assertIn("must have", text)
         self.assertIn("wait for permission", text)
+        self.assertIn("May I install the optional Scrapling package", text)
+        self.assertIn("continue the entire setup and search", text)
 
     def test_scrapling_check_falls_back_without_failure(self):
         result = subprocess.run(
