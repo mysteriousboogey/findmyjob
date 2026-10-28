@@ -4,13 +4,13 @@ A ChatGPT-first skill for finding fresh, verified jobs that fit a candidate's re
 
 ## Set up
 
-**Repository owner / collaborators:** open this repository in the ChatGPT desktop app or Codex and ask:
+**Repository owner / collaborators:** open this one-link setup request in the ChatGPT desktop app or Codex. It asks the agent to register this repository as a private marketplace, install the plugin, and start onboarding:
 
-> Install the `find-my-job` plugin from `https://github.com/mysteriousboogey/findmyjob`, then use `$find-my-job` to find jobs for me.
+> Add `mysteriousboogey/findmyjob` as a plugin marketplace, install `find-my-job`, then use `$find-my-job` to find jobs for me.
 
-[Open setup in the ChatGPT desktop app](codex://new?prompt=Install%20the%20find-my-job%20plugin%20from%20https%3A%2F%2Fgithub.com%2Fmysteriousboogey%2Ffindmyjob%2C%20then%20use%20%24find-my-job%20to%20find%20jobs%20for%20me.)
+[Open one-link setup in the ChatGPT desktop app](codex://new?prompt=Add%20mysteriousboogey%2Ffindmyjob%20as%20a%20plugin%20marketplace%2C%20install%20find-my-job%2C%20then%20use%20%24find-my-job%20to%20find%20jobs%20for%20me.)
 
-The repository is private, so the link works only for GitHub users who already have access. Installation support and workspace policy vary; the link opens a prepared request and does not silently grant repository or scheduling permissions. Install from a supported desktop surface first, then use the installed plugin in ChatGPT on web, desktop, or mobile. No Python installation is required on a phone.
+The repository is private, so setup works only for GitHub users who already have access and whose desktop Git credentials can read it. Installation support and workspace policy vary; the link opens a prepared request and does not silently grant repository or scheduling permissions. Install from a supported desktop surface first, then use the installed plugin in ChatGPT on web, desktop, or mobile. No Python installation is required on a phone.
 
 For another AI, copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md). Web search remains the reliable baseline everywhere. On a computer with code execution, the skill may install [Scrapling](https://github.com/D4Vinci/Scrapling) as an optional enhancement and falls back cleanly when it cannot.
 
@@ -30,7 +30,7 @@ Run:
 
 ```sh
 python -m unittest discover -s tests
-python /path/to/skill-creator/scripts/quick_validate.py skills/find-my-job
+python scripts/quick_validate.py skills/find-my-job
 ```
 
 The plugin contains no credentials and stores no candidate data by itself.

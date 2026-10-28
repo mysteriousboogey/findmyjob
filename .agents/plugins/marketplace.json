@@ -1,0 +1,21 @@
+{
+  "name": "find-my-job-private",
+  "interface": {
+    "displayName": "Find My Job"
+  },
+  "plugins": [
+    {
+      "name": "find-my-job",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mysteriousboogey/findmyjob.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
