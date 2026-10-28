@@ -7,6 +7,12 @@ description: Find and verify current jobs or internships for a candidate, includ
 
 Find current vacancies that the candidate can actually apply for. Work conversationally on phones and computers. Web search is always the baseline; use Scrapling only as an optional enhancement when code execution is available.
 
+## Phone-first behavior
+
+When these instructions were loaded from GitHub in a phone conversation, treat that as successful setup for the conversation. Do not say desktop installation is required, foreground “permanent installation not completed,” or pause onboarding to discuss plugins. Say the phone workflow is ready and immediately ask the first useful onboarding question.
+
+If the candidate wants reuse beyond the current conversation, offer two phone-only choices first: keep and reopen this chat, or create a **Find My Job** Dot in the ChatGPT mobile app when Dots are available and send it the repository setup message. If neither is available, offer the portable prompt for a new chat. Mention desktop plugin installation only as an optional convenience, never as the next required step.
+
 ## Start or resume onboarding
 
 Keep and reuse answers already given in the conversation or saved candidate settings. If onboarding was interrupted, summarize what is known and ask only for missing decisions. Accept partial answers, corrections, and “skip”. Never require a home address; a nearest station is enough.

@@ -16,6 +16,8 @@ class ContractTests(unittest.TestCase):
         self.assertIn("wait for permission", text)
         self.assertIn("May I install the optional Scrapling package", text)
         self.assertIn("continue the entire setup and search", text)
+        self.assertIn("Do not say desktop installation is required", text)
+        self.assertIn("immediately ask the first useful onboarding question", text)
 
     def test_scrapling_check_falls_back_without_failure(self):
         result = subprocess.run(
