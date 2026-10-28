@@ -15,7 +15,11 @@ If the candidate wants reuse beyond the current conversation, offer two phone-on
 
 ## Start or resume onboarding
 
-Keep and reuse answers already given in the conversation or saved candidate settings. If onboarding was interrupted, summarize what is known and ask only for missing decisions. Accept partial answers, corrections, and “skip”. Never require a home address; a nearest station is enough.
+Start every new user with an empty candidate profile. Reuse a value only when that user explicitly supplied it in the current conversation or explicitly asked to load a named saved profile available to their account. Never derive candidate details from this repository, examples, another conversation, another user, web results, test data, or model assumptions.
+
+Before showing or using any prefilled profile, state its source. If a qualification, institution, role, language, salary, location, commute, or work preference cannot be traced to the current user's explicit input, remove it and ask. Do not present an inferred profile as fact.
+
+If onboarding was interrupted in the same conversation, summarize confirmed answers and ask only for missing decisions. Accept partial answers, corrections, and “skip”. Never require a home address; a nearest station is enough.
 
 Collect these settings naturally, grouping questions instead of presenting a long form:
 
@@ -73,6 +77,6 @@ Read [references/scheduling.md](references/scheduling.md) only when the candidat
 
 ## Resilience and privacy
 
-Keep candidate settings editable and portable. On request, show them as plain text or JSON for use with another AI. Store the minimum needed; treat an exact address, contact details, résumé, and employment history as private. Prefer nearest-station data over an address. Tell the candidate where persistent data will be stored and obtain consent before saving it outside the current conversation.
+Keep candidate settings editable and portable. On request, show them as plain text or JSON for use with another AI. Store the minimum needed; treat all candidate settings, exact addresses, contact details, résumés, and employment histories as private. Never write a candidate profile into this repository. Prefer nearest-station data over an address. Tell the candidate where persistent data will be stored and obtain consent before saving it outside the current conversation.
 
 If a search or tool stops, preserve the confirmed profile and completed verification, report what remains, and resume from the last verified step. If a helper is missing or broken, self-check once, repair only when safe, then fall back to web search rather than blocking the job search.

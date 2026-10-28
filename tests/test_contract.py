@@ -18,6 +18,9 @@ class ContractTests(unittest.TestCase):
         self.assertIn("continue the entire setup and search", text)
         self.assertIn("Do not say desktop installation is required", text)
         self.assertIn("immediately ask the first useful onboarding question", text)
+        self.assertIn("Start every new user with an empty candidate profile", text)
+        self.assertIn("Never derive candidate details", text)
+        self.assertIn("state its source", text)
 
     def test_scrapling_check_falls_back_without_failure(self):
         result = subprocess.run(

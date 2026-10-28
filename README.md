@@ -65,6 +65,8 @@ python scripts/quick_validate.py skills/find-my-job
 
 The plugin contains no credentials and stores no candidate data by itself.
 
+Each new user starts with an empty profile. Find My Job may use only settings that the current user explicitly provides or asks to load from their own saved profile; it must never guess a profile or take one from the repository, examples, or another conversation.
+
 ## License
 
 [MIT](LICENSE) — use, modify, and share it while keeping the license notice.
