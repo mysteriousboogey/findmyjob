@@ -2,7 +2,17 @@
 
 A ChatGPT-first skill for finding fresh, verified jobs that fit a candidate's real constraints. It works directly in a phone conversation with no computer, Python, or plugin installation required. Desktop installation is optional.
 
-## Start on a phone — no computer required
+## Set it up
+
+On a PC with ChatGPT desktop or Codex, send one request:
+
+> Set this up: https://github.com/mysteriousboogey/findmyjob
+
+In this repository, **set up** has one defined meaning: register its plugin marketplace, install or enable `find-my-job` for the ChatGPT account, confirm it is available in a new ChatGPT conversation—including mobile when plugins sync to that account—and then start onboarding. It does **not** mean configuring repository security, visibility, GitHub Actions, deployment, or a website.
+
+The setup agent must inspect existing plugin state first, avoid duplicates, and ask only for a permission or account decision that is actually required. If account or workspace policy blocks permanent installation, it must explain the specific limitation and continue with the conversation-based workflow instead of stopping.
+
+## Conversation-only use
 
 In the ChatGPT mobile app, send this repository link with the message:
 
@@ -14,7 +24,7 @@ For a reusable mobile home, create a Dot named **Find My Job** in the ChatGPT mo
 
 Because this repository is private, the phone's ChatGPT account must be able to access it. Anyone without repository access can instead copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md); that works in ChatGPT or another web-search-capable AI without installing anything.
 
-## Optional desktop installation
+## Manual desktop installation
 
 Desktop users may register the private marketplace so Find My Job appears across new supported conversations:
 

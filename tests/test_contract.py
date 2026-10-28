@@ -28,6 +28,12 @@ class ContractTests(unittest.TestCase):
         )
         self.assertIn('"available"', result.stdout)
 
+    def test_repository_setup_intent_is_unambiguous(self):
+        instructions = (ROOT / "AGENTS.md").read_text()
+        self.assertIn("Do not interpret setup as repository administration", instructions)
+        self.assertIn("Install or enable the `find-my-job` plugin", instructions)
+        self.assertIn("including on mobile", instructions)
+
 
 if __name__ == "__main__":
     unittest.main()
