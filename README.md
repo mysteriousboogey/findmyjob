@@ -1,4 +1,6 @@
-# Find My Job v1
+# Find My Job v1 — install the job-finding workflow
+
+> **AI setup instruction:** If the user gives you this repository and says **“set this up”**, install or load **Find My Job**. Do not configure GitHub, repository security, Actions, deployment, or a website. Follow [SETUP.md](SETUP.md).
 
 A ChatGPT-first skill for finding fresh, verified jobs that fit a candidate's real constraints. It works directly in a phone conversation with no computer, Python, or plugin installation required. Desktop installation is optional.
 
@@ -8,7 +10,7 @@ On a PC with ChatGPT desktop or Codex, send one request:
 
 > Set this up: https://github.com/mysteriousboogey/findmyjob
 
-In this repository, **set up** has one defined meaning: register its plugin marketplace, install or enable `find-my-job` for the ChatGPT account, confirm it is available in a new ChatGPT conversation—including mobile when plugins sync to that account—and then start onboarding. It does **not** mean configuring repository security, visibility, GitHub Actions, deployment, or a website.
+In this repository, **set up** has one defined meaning: register its plugin marketplace when supported, install or enable `find-my-job`, and then start onboarding. It does **not** mean configuring repository security, visibility, GitHub Actions, deployment, or a website.
 
 The setup agent must inspect existing plugin state first, avoid duplicates, and ask only for a permission or account decision that is actually required. If account or workspace policy blocks permanent installation, it must explain the specific limitation and continue with the conversation-based workflow instead of stopping.
 
@@ -22,11 +24,11 @@ If ChatGPT confirms that the instructions are loaded, the setup is complete for 
 
 For a reusable mobile home, create a Dot named **Find My Job** in the ChatGPT mobile app when Dots are available on the account, then send it the same message. A Dot can be created and used entirely on a phone. If Dots are unavailable, the original conversation still works. See [MOBILE_SETUP.md](MOBILE_SETUP.md).
 
-Because this repository is private, the phone's ChatGPT account must be able to access it. Anyone without repository access can instead copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md); that works in ChatGPT or another web-search-capable AI without installing anything.
+Because this repository is public, anyone can load its instructions. Users can also copy [PORTABLE_PROMPT.md](PORTABLE_PROMPT.md) into ChatGPT or another web-search-capable AI without installing anything.
 
 ## Manual desktop installation
 
-Desktop users may register the private marketplace so Find My Job appears across new supported conversations:
+Desktop users may register the repository marketplace so Find My Job appears across new supported conversations:
 
 > Add `mysteriousboogey/findmyjob` as a plugin marketplace, install `find-my-job`, then use `$find-my-job` to find jobs for me.
 

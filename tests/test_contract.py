@@ -30,9 +30,12 @@ class ContractTests(unittest.TestCase):
 
     def test_repository_setup_intent_is_unambiguous(self):
         instructions = (ROOT / "AGENTS.md").read_text()
+        setup = (ROOT / "SETUP.md").read_text()
         self.assertIn("Do not interpret setup as repository administration", instructions)
         self.assertIn("Install or enable the `find-my-job` plugin", instructions)
         self.assertIn("including on mobile", instructions)
+        self.assertIn("not to configure this GitHub repository", setup)
+        self.assertIn("Do not ask about GitHub visibility", setup)
 
 
 if __name__ == "__main__":

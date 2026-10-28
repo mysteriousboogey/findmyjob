@@ -2,7 +2,7 @@
 
 When a user says “set this up”, “install this”, or equivalent, they mean:
 
-1. Register this repository as the `find-my-job-private` plugin marketplace when it is not already registered.
+1. Read `SETUP.md` and register this repository as the `find-my-job` plugin marketplace when supported and not already registered.
 2. Install or enable the `find-my-job` plugin for their ChatGPT account.
 3. Confirm it can be selected in a new ChatGPT conversation, including on mobile when the account supports synced plugins.
 4. Start Find My Job onboarding only after installation is confirmed, unless the user asks to start immediately.
