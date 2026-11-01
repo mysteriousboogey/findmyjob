@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 .DS_Store
+*.sqlite3
+candidate-profile.json
+application-drafts/

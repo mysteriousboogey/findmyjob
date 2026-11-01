@@ -1,11 +1,19 @@
 # Set up Find My Job
 
-If the user gave this repository and said **“set this up”**, they are asking to install or load **Find My Job**—not to configure this GitHub repository.
+The user should only need to provide this repository and say **“set this up.”** Setup installs the workflow; it does not configure GitHub or build a website.
 
-## Do this
+## Installer workflow
 
-1. If the current environment supports plugin marketplaces, add `mysteriousboogey/findmyjob`, install or enable `find-my-job`, and avoid duplicate entries.
-2. If permanent plugin installation is not supported here, load `skills/find-my-job/SKILL.md` and follow it in the current conversation.
-3. Confirm which mode is active in one sentence, then begin candidate onboarding.
+1. Inspect current plugin and MCP configuration and reuse healthy existing entries.
+2. Register `mysteriousboogey/findmyjob` as a plugin marketplace when supported.
+3. Install or enable the root `find-my-job` plugin.
+4. Run the packaged `setup-find-my-job` onboarding skill.
+5. Let that skill check document reading, web access, Playwright, optional Scrapling, and private local storage.
+6. Continue automatically after each approved permission.
+7. Finish with: “Find My Job is ready. Upload your resume and say ‘Find me jobs.’”
 
-Do not ask about GitHub visibility, permissions, branch protection, Actions, deployment, or websites. Do not modify the repository unless the user separately asks for repository changes. Never stop setup merely because optional Scrapling or permanent plugin installation is unavailable.
+If the host cannot install plugins permanently, load the three packaged skills for the current desktop session and state that limitation. Do not pretend an unavailable MCP server, browser, schedule, or persistent installation was enabled.
+
+Do not ask the user to choose commands, package managers, paths, databases, or MCP configuration. Do not request repository administration, deployment, or website decisions.
+
+Candidate information must live outside the plugin directory. Obtain consent immediately before creating persistent storage; otherwise operate in the current session only.

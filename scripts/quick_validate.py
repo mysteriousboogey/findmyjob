@@ -5,8 +5,6 @@ import pathlib
 import re
 import sys
 
-import yaml
-
 
 def main():
     skill = pathlib.Path(sys.argv[1])
@@ -14,9 +12,15 @@ def main():
     match = re.match(r"^---\n(.*?)\n---\n", text, re.DOTALL)
     if not match:
         raise SystemExit("SKILL.md has no YAML frontmatter")
-    metadata = yaml.safe_load(match.group(1))
+    metadata = {}
+    for line in match.group(1).splitlines():
+        key, separator, value = line.partition(":")
+        if separator:
+            metadata[key.strip()] = value.strip().strip('"\'')
     if metadata.get("name") != skill.name or not metadata.get("description"):
         raise SystemExit("skill name/description is invalid")
+    if "TODO" in text or "[PLACEHOLDER]" in text:
+        raise SystemExit("skill contains unfinished placeholders")
     print("Skill is valid!")
 
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Set Up Find My Job"
+  short_description: "Install and verify the desktop job workflow"
+  brand_color: "#2563EB"
+  default_prompt: "Use $setup-find-my-job to install and verify Find My Job on this computer."
+policy:
+  allow_implicit_invocation: true

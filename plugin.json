@@ -1,6 +1,15 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "find-my-job",
-  "version": "1.0.0",
-  "description": "Find and verify jobs that match a candidate's real constraints."
+  "version": "1.1.0",
+  "description": "Find verified jobs from a confirmed resume and prepare selected applications for the candidate to submit.",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup-find-my-job/SKILL.md",
+      "interface": {
+        "displayName": "Find My Job",
+        "shortDescription": "Find jobs and prepare applications for your review"
+      }
+    }
+  }
 }

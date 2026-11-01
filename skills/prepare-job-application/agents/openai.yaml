@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prepare Job Application"
+  short_description: "Fill a selected application for your review"
+  brand_color: "#2563EB"
+  default_prompt: "Use $prepare-job-application to prepare my selected job application and stop before submission."
+policy:
+  allow_implicit_invocation: true

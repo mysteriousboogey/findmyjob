@@ -1,42 +1,36 @@
-# Search and ranking contract
+# Discovery, verification, and matching contract
 
 ## Query plan
 
-1. Build queries from each target title or qualification cluster, location, arrangement, and hard exclusions.
-2. Search company career sites and/or job boards according to the candidate's source preference.
-3. Search recent results first, using a seven-day filter when the source supports it.
-4. Open the vacancy page. A search snippet alone does not confirm a match.
-5. Cross-check aggregators against the employer's page when possible.
+Build searches from confirmed titles or qualification clusters, location, arrangement, recency, and hard exclusions. Search employer career sites and public ATS sources as well as allowed job boards. Discover broadly, then verify on the canonical employer page where possible.
 
-## Confirm before ranking
+## Verification record
 
-A listing is confirmed only when its page is reachable and shows an active application path or an unambiguous open status. Record:
+A ranked listing needs a reachable page with an active application path or unambiguous open status. Record:
 
-- normalized company and title for deduplication
-- source URL and direct application URL
-- observed open status and verification date
+- normalized company, title, and location
+- source and direct application URL
+- observed open status and verification time
 - posting date or `Not stated`
-- exact salary wording or `Not advertised`
+- exact advertised salary or `Not advertised`
 - arrangement and location as advertised
 - public recruitment contact or `Not publicly listed`
-- evidence for each hard requirement
+- job description and evidence for each hard requirement
 
-Treat “competitive”, estimates from another site, and inferred market ranges as `Not advertised`. Never convert annual to monthly salary unless clearly labelled as a calculation, and do not use a calculation to pass a hard salary floor.
+Search snippets can discover but cannot verify a vacancy. Treat “competitive,” third-party estimates, and inferred ranges as `Not advertised`. Do not convert pay periods to pass a hard salary floor.
 
-## Deduplicate and rank
+## Deduplication and eligibility
 
-Deduplicate by normalized company + title + location, preferring the employer's canonical application page. Keep alternate sources only as verification notes.
+Use normalized company + title + location as the canonical key, preferring the employer application page. Keep alternate sources only as evidence notes.
 
-Exclude unconfirmed listings and hard-criteria failures. Rank the rest by:
+For every mandatory criterion record `pass`, `fail`, `needs confirmation`, or `not stated`. Exclude confirmed failures. Do not silently turn unknowns into passes.
 
-1. hard-criteria confidence
-2. remote-first when requested
-3. posted within 7 days
-4. preferred criteria such as salary, benefits, source, and arrangement
-5. older verified-open listings
+## Suitability
 
-Do not pad the table. Fewer confirmed matches is better than invented or weak matches.
+Score only eligible jobs using supported evidence for relevant experience, demonstrated skills, education or certification, role and industry alignment, preferences, and evidence strength. Explain strong matches, partial matches, gaps, and unresolved requirements. A score is comparative suitability, not hiring probability.
 
-## Commute evidence
+Rank by eligibility confidence, confirmed user preferences, recency, evidence strength, and older verified-open roles. Do not pad results.
 
-Commute origin and search location are different fields. A place name or straight-line distance does not prove walking time. Use a current routing/map source for the walking leg and full journey. Disclose transfers, assumed station, route time, and anything that could not be checked. Never state a commute as confirmed from an office postcode alone.
+## Commute
+
+Search location and commute origin are separate. Verify walking and full journey times with a current routing source. Disclose assumptions, transfers, source, and verification time. Straight-line distance or a postcode alone is not commute evidence.
